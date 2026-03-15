@@ -8,7 +8,7 @@
       "title": "Country",
       "type": "string",
       "description": "Select the country for job search.",
-      "default": "",
+      "default": "Ireland",
       "editor": "textfield"
     },
     "companyName": {
@@ -22,41 +22,68 @@
       "title": "Location Name",
       "type": "string",
       "description": "Enter the city or region.",
-      "default": "",
+      "default": "Dublin",
       "editor": "textfield"
     },
     "includeKeyword": {
       "title": "Keywords to Include",
       "type": "string",
       "description": "Comma-separated keywords (e.g., React, Next.js).",
-      "default": "",
+      "default": "Site Reliability Engineer,SRE,DevOps Engineer,Cloud Engineer,Platform Engineer,Kubernetes,AWS,Azure,Terraform,Dynatrace,Observability",
       "editor": "textarea"
     },
     "pagesToFetch": {
       "title": "Pages to Fetch",
       "type": "integer",
       "description": "Number of pages to scrape.",
-      "default": 1,
+      "default": 5,
       "minimum": 1,
       "editor": "number"
     },
-  "jobType": {
+    "jobType": {
       "title": "Job Type",
       "type": "string",
       "description": "Select job type.",
-      "enum": ["FULLTIME", "PARTTIME", "CONTRACTOR", "INTERN"],
-      "enumTitles": ["Full-time", "Part-time", "Contract", "Internship"],
+      "enum": [
+        "FULLTIME",
+        "PARTTIME",
+        "CONTRACTOR",
+        "INTERN"
+      ],
+      "enumTitles": [
+        "Full-time",
+        "Part-time",
+        "Contract",
+        "Internship"
+      ],
+      "default": "FULLTIME",
       "editor": "select"
     },
     "datePosted": {
       "title": "Posted in the last",
       "type": "string",
       "description": "Choose time range.",
-      "enum": ["all", "today", "3days", "week", "month"],
-      "enumTitles": ["All", "Today", "3 days", "Week", "Month"],
-      "default": "all",
+      "enum": [
+        "all",
+        "today",
+        "3days",
+        "week",
+        "month"
+      ],
+      "enumTitles": [
+        "All",
+        "Today",
+        "3 days",
+        "Week",
+        "Month"
+      ],
+      "default": "week",
       "editor": "select"
     }
   },
-  "required": ["countryName", "locationName", "pagesToFetch"]
+  "required": [
+    "countryName",
+    "locationName",
+    "pagesToFetch"
+  ]
 }
